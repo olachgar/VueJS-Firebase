@@ -11,7 +11,10 @@
 <script>
 
   export default {
-    name: 'Help'
+    name: 'Help',
+    mounted() {
+        document.title = 'Help mounted';
+    }
     }
 </script>
 

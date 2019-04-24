@@ -5,7 +5,6 @@ import 'vue-material/dist/vue-material.min.css'
 import 'vue-material/dist/theme/default.css' // This line here
 import router from './router/router.js'
 
-
 import App from './App.vue'
 
 Vue.use(VueMaterial)

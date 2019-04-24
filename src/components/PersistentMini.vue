@@ -31,7 +31,7 @@
 
             <md-list-item>
               <router-link class="md-list-item-content my-router-link" :to="{ name: 'calendar'}">
-                <md-icon>calendar_today</md-icon>
+                <md-icon style="color:red;">calendar_today</md-icon>
                 <span class="md-list-item-text">Agenda</span>
               </router-link>
             </md-list-item>
@@ -45,7 +45,7 @@
 
             <md-list-item>
               <router-link class="md-list-item-content my-router-link" :to="{ name: 'settings'}">
-                <md-icon>settings</md-icon>
+                <md-icon style="color:orange;">settings</md-icon>
                 <span class="md-list-item-text">Configuration</span>
               </router-link>
             </md-list-item>

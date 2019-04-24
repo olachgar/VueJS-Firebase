@@ -9,9 +9,11 @@
 
 
 <script>
-
   export default {
-    name: 'Dashboard'
+        name: 'Dashboard',
+        mounted() {
+            document.title = 'Dashboard mounted';
+        }
     }
 </script>
 
