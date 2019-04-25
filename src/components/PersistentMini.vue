@@ -2,10 +2,41 @@
   <div class="page-container">
     <md-app>
       <md-app-toolbar class="md-primary" md-elevation="0">
+
         <md-button class="md-icon-button" @click="toggleMenu" v-if="!menuVisible">
           <md-icon>menu</md-icon>
         </md-button>
-        <span class="md-title">My Title</span>
+        
+        <span class="md-title">My App</span>
+
+        <div class="md-toolbar-section-end">
+          
+          <md-badge class="md-primary md-square" md-position="bottom" md-content="12">
+            <md-menu md-size="medium" md-align-trigger>
+          <md-button md-menu-trigger class="md-icon-button">
+            <md-avatar>
+              <img :src="photo" alt="People">
+            </md-avatar>
+          </md-button>
+
+            <md-menu-content>
+              <md-menu-item>My Item 1</md-menu-item>
+              <md-menu-item>My Item 2</md-menu-item>
+              <md-menu-item>
+                <md-icon>phone</md-icon>
+                <span>My Item 1</span>
+              </md-menu-item>
+            </md-menu-content>
+          </md-menu>
+
+          </md-badge>
+          
+          <md-button class="md-icon-button">
+            <md-icon>more_vert</md-icon>
+          </md-button>
+
+        </div>
+
       </md-app-toolbar>
 
       
@@ -53,6 +84,7 @@
             <md-list-item>
               <md-icon style="color:pink;">business</md-icon>
               <span class="md-list-item-text">Cabinet</span>
+              <md-badge class="md-square" md-content="not available yet" />
             </md-list-item>
 
             <md-list-item>
@@ -84,7 +116,8 @@
   export default {
     name: 'PersistentMini',
     data: () => ({
-      menuVisible: false
+      menuVisible: false,
+      photo: 'https://static.independent.co.uk/s3fs-public/thumbnails/image/2016/06/02/13/gettyimages-469954510.jpg?w968h681',
     }),
     methods: {
       toggleMenu () {
