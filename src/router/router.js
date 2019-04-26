@@ -3,6 +3,7 @@ import VueRouter from 'vue-router'
 import Dashboard from '../views/Dashboard.vue'
 import Calendar from '../views/Calendar.vue'
 import Records from '../views/Records.vue'
+import PatientDetails from '../components/PatientDetails.vue'
 import Settings from '../views/Settings.vue'
 import Help from '../views/Help.vue'
 
@@ -21,6 +22,11 @@ const routes = [
     name: 'records',
     path: '/records',
     component: Records
+  },
+  {
+    name: 'patient-details',
+    path: '/patient-details/:id',
+    component: PatientDetails
   },
   {
     name: 'settings',

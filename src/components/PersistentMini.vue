@@ -20,11 +20,17 @@
           </md-button>
 
             <md-menu-content>
-              <md-menu-item>My Item 1</md-menu-item>
-              <md-menu-item>My Item 2</md-menu-item>
               <md-menu-item>
-                <md-icon>phone</md-icon>
-                <span>My Item 1</span>
+                <md-icon>insert_comment</md-icon>
+                <span>Log out</span>
+              </md-menu-item>
+              <md-menu-item>
+                <md-icon>verified_user</md-icon>
+                <span>Log out</span>
+              </md-menu-item>
+              <md-menu-item>
+                <md-icon>settings_power</md-icon>
+                <span>Log out</span>
               </md-menu-item>
             </md-menu-content>
           </md-menu>
@@ -84,7 +90,7 @@
             <md-list-item>
               <md-icon style="color:pink;">business</md-icon>
               <span class="md-list-item-text">Cabinet</span>
-              <md-badge class="md-square" md-content="not available yet" />
+              <md-badge class="md-square" md-content="not available" />
             </md-list-item>
 
             <md-list-item>
