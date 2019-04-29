@@ -23,6 +23,13 @@ import Patient from './Patient.vue'
         data: () => ({
             selectedPatient: null
         }),
+        mounted(){
+            this.$store.dispatch('userInitiate')
+            this.$store.dispatch('userAdd')
+        },
+        created(){
+            
+        },
         components:{
             Patient
         },
@@ -35,6 +42,6 @@ import Patient from './Patient.vue'
 </script>
 
 
-<style lang="scss">
+<style lang="scss" scoped>
 
 </style>

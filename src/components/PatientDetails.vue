@@ -1,7 +1,7 @@
 <template>
     <div>
 
-    <md-card style="with:100%;">
+    <md-card>
       <md-card-header>
         <div class="md-title">Card without hover effect {{$route.params.id}} </div>
       </md-card-header>
@@ -17,10 +17,24 @@
     </md-card>
 
     <md-tabs class="md-transparent" md-alignment="fixed">
-      <md-tab id="tab-home" md-label="Home"></md-tab>
-      <md-tab id="tab-pages" md-label="Pages"></md-tab>
-      <md-tab id="tab-posts" md-label="Posts"></md-tab>
-      <md-tab id="tab-favorites" md-label="Favorites"></md-tab>
+      <md-tab id="tab-home" md-label="Home">
+        Home
+      </md-tab>
+      <md-tab id="tab-pages" md-label="Pages">
+        Pages
+      </md-tab>
+      <md-tab id="tab-posts" md-label="Posts">
+        Posts
+      </md-tab>
+      <md-tab id="tab-favorites" md-label="Favorites">
+        Favorites  
+      </md-tab>      
+      <md-tab id="tab-favorite" md-label="Favorite">
+        Favorite
+      </md-tab>
+      <md-tab id="tab-favorite01" md-label="Favorite01">
+        <md-icon>thumb_up</md-icon>
+      </md-tab>
     </md-tabs>
     
     </div>
@@ -37,7 +51,10 @@
 </script>
 
 
-<style lang="scss">
-
+<style lang="scss" scoped>
+.md-card{
+  width: 95%;
+  align-items: center;
+}
   
 </style>
