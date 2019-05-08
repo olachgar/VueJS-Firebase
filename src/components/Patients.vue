@@ -26,6 +26,7 @@ import Patient from './Patient.vue'
         mounted(){
             this.$store.dispatch('userInitiate')
             this.$store.dispatch('userAdd')
+            this.$store.dispatch('userInitiate1')
         },
         created(){
             

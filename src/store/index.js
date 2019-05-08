@@ -1,7 +1,10 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
+import * as firebase from 'firebase';
+
 
 Vue.use(Vuex)
+
 
 const store = new Vuex.Store({
     state: {
@@ -10,14 +13,16 @@ const store = new Vuex.Store({
     },
     mutations:{
         userInitiate: (state, user) => {
-            console.log('1- state.users.count = ' + state.users.count)
+
             const newUsers = state.users.concat(user)
-            console.log('2- newUsers = ' + state.users.count)
-            return state.users = newUsers
-            console.log('3- state.users.count = ' + state.users.count)
+            state.users = newUsers
+
             return state.users
-            console.log('4- state.users.count = ' + state.users.count)
             console.log('mutations/userInitiate')
+        },
+        userInitiate1: (state, data) => {
+            console.log(data)
+            console.log('mutations/userInitiate1')
         },
         userAdd: (state, user) => {
             return state.users.push(user)
@@ -92,6 +97,30 @@ const store = new Vuex.Store({
 
             context.commit('userInitiate', allUsers)
             console.log('actions/userInitiate')
+        },
+        async userInitiate1 (context, firestore) {
+            /*
+            const ref = firebase.firestore().collection('toto').doc();
+            ref.get().then((doc) => {
+            if (doc.exists) {
+                console.log(doc.id + ' - ' + doc.data().firstName)
+            } else {
+                console.log("No such document!");
+            }
+            });
+            */
+            firebase.firestore().collection("toto").get().then(function(querySnapshot) {
+                querySnapshot.forEach(function(doc) {
+                    // doc.data() is never undefined for query doc snapshots
+                    console.log(doc.id, " => ", doc.data());
+                });
+            });
+
+            //let convoRef = db.collection('toto')
+            //.db.collection('toto')
+            //console.log(convoRef)
+            //let convos = await convoRef.get()
+            //convos.forEach(conversation => commit('userInitiate', { conversation }))
         },
         userAdd (context) {
             var newUser = {
